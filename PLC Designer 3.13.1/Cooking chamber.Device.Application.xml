@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.5.0</Version>
+    <SymbolConfigObject version="3.5.5.50" />
+    <ProjectInfo name="Cooking chamber" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_LREAL" size="8" swapsize="8" typeclass="LReal" iecname="LREAL" />
+    <TypeArray name="T_ARRAY__0__7__OF_LREAL" size="64" nativesize="64" typeclass="Array" iecname="ARRAY [0..7] OF LREAL" basetype="T_LREAL">
+      <ArrayDim minrange="0" maxrange="7" />
+    </TypeArray>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeArray name="T_ARRAY__0__7__OF_BOOL" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..7] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="7" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__OF_LREAL" size="24" nativesize="24" typeclass="Array" iecname="ARRAY [0..2] OF LREAL" basetype="T_LREAL">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__OF_BOOL" size="3" nativesize="3" typeclass="Array" iecname="ARRAY [0..2] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__0__10__OF_BOOL" size="33" nativesize="33" typeclass="Array" iecname="ARRAY [0..2, 0..10] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="2" />
+      <ArrayDim minrange="0" maxrange="10" />
+    </TypeArray>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GLOBAL_IO_CONFIGURATIONS">
+        <Node name="Analog_input_channel_00" type="T_ARRAY__0__7__OF_LREAL" access="ReadWrite" />
+        <Node name="Digital_input_channel_00" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_input_channel_01" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_input_channel_02" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_output_channel_00" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_output_channel_01" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_output_channel_02" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_output_channel_03" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_output_channel_04" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+        <Node name="Digital_output_channel_05" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GLOBAL_VARIABLES">
+        <Node name="Burner_protection" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Burner_reset" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Chamber_temperature" type="T_ARRAY__0__2__OF_LREAL" access="ReadWrite" />
+        <Node name="Chimney_activation" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Core_temperature" type="T_ARRAY__0__2__OF_LREAL" access="ReadWrite" />
+        <Node name="Emergency_chamber" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Higher_chimney_closed" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Higher_chimney_open" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Lower_chimney_closed" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Lower_chimney_open" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Motor_activation" type="T_ARRAY__0__2__0__10__OF_BOOL" access="ReadWrite" />
+        <Node name="Motor_protection" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Smokehouse_activation" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Sound_activation" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+        <Node name="Steam_valve_activation" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
