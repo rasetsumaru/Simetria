@@ -14,7 +14,8 @@
     <TypeArray name="T_ARRAY__0__7__OF_BOOL" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..7] OF BOOL" basetype="T_BOOL">
       <ArrayDim minrange="0" maxrange="7" />
     </TypeArray>
-    <TypeArray name="T_ARRAY__0__2__OF_LREAL" size="24" nativesize="24" typeclass="Array" iecname="ARRAY [0..2] OF LREAL" basetype="T_LREAL">
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeArray name="T_ARRAY__0__2__OF_REAL" size="12" nativesize="12" typeclass="Array" iecname="ARRAY [0..2] OF REAL" basetype="T_REAL">
       <ArrayDim minrange="0" maxrange="2" />
     </TypeArray>
     <TypeArray name="T_ARRAY__0__2__OF_BOOL" size="3" nativesize="3" typeclass="Array" iecname="ARRAY [0..2] OF BOOL" basetype="T_BOOL">
@@ -27,7 +28,7 @@
   </TypeList>
   <NodeList>
     <Node name="Application">
-      <Node name="GLOBAL_IO_CONFIGURATIONS">
+      <Node name="CHANNELS">
         <Node name="Analog_input_channel_00" type="T_ARRAY__0__7__OF_LREAL" access="ReadWrite" />
         <Node name="Digital_input_channel_00" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
         <Node name="Digital_input_channel_01" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
@@ -39,12 +40,14 @@
         <Node name="Digital_output_channel_04" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
         <Node name="Digital_output_channel_05" type="T_ARRAY__0__7__OF_BOOL" access="ReadWrite" />
       </Node>
-      <Node name="GLOBAL_VARIABLES">
+      <Node name="GLOBAL">
         <Node name="Burner_protection" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
         <Node name="Burner_reset" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
-        <Node name="Chamber_temperature" type="T_ARRAY__0__2__OF_LREAL" access="ReadWrite" />
+        <Node name="Chamber_temperature" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="Chamber_temperature_sensor" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
         <Node name="Chimney_activation" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
-        <Node name="Core_temperature" type="T_ARRAY__0__2__OF_LREAL" access="ReadWrite" />
+        <Node name="Core_temperature" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
+        <Node name="Core_temperature_sensor" type="T_ARRAY__0__2__OF_REAL" access="ReadWrite" />
         <Node name="Emergency_chamber" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
         <Node name="Higher_chimney_closed" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
         <Node name="Higher_chimney_open" type="T_ARRAY__0__2__OF_BOOL" access="ReadWrite" />
